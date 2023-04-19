@@ -1,4 +1,7 @@
 import * as fs from 'fs';
+import path from 'path';
+
+const regulatoryData = path.join(__dirname, '../data/regulatory-data.json');
 
 export class RegulatoryAgency {
 	name: string;
@@ -79,8 +82,10 @@ export const getRegulatoryAgency = (
 	state: State,
 	category: Category
 ): RegulatoryAgency => {
-	const filePath = './src/data/regulatory-data.json';
-	const regulatoryAgencies = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+	const regulatoryAgencies = JSON.parse(
+		fs.readFileSync(regulatoryData, 'utf8')
+	);
+
 	const stateName = state.name || state.abbreviation;
 
 	const stateData = regulatoryAgencies.find(
