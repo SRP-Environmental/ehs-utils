@@ -1,6 +1,7 @@
-import fs from 'fs';
-import gulp from 'gulp';
-import prompt from 'gulp-prompt';
+const fs = require('fs');
+const gulp = require('gulp');
+const prompt = require('gulp-prompt');
+const ts = require('gulp-typescript');
 
 gulp.task('add-data', function () {
 	return gulp.src('*').pipe(
@@ -99,3 +100,15 @@ gulp.task('add-data', function () {
 		)
 	);
 });
+
+const tsProject = ts.createProject('tsconfig.json');
+
+gulp.task('build', function () {
+	return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest('dist'));
+});
+
+gulp.task('watch', function () {
+	gulp.watch('src/**/*.ts', gulp.series('build'));
+});
+
+gulp.task('default', gulp.series('build', 'watch'));

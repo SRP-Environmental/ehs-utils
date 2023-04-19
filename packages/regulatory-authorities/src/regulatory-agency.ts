@@ -6,6 +6,8 @@ export class RegulatoryAgency {
 	phone: string;
 	website: string;
 	governance: string[];
+	state: State;
+	requestedGovernance: string;
 	// You can add additional properties as needed
 
 	constructor(
@@ -13,37 +15,56 @@ export class RegulatoryAgency {
 		abbreviation: string,
 		phone: string,
 		website: string,
-		governance: string[]
+		governance: string[],
+		state: State,
+		requestedGovernance: string
 	) {
 		this.name = name;
 		this.abbreviation = abbreviation;
 		this.phone = phone;
 		this.website = website;
 		this.governance = governance;
+		this.state = state;
+		this.requestedGovernance = requestedGovernance;
 	}
 
-	getInfo(): string {
-		return `${this.name} (${this.abbreviation}): Phone: ${this.phone}, Website: ${this.website}`;
+	/**
+	 * combineArray
+	 * @param arr the array of strings to combine
+	 * @returns the combined string of the array properly formatted for a sentence
+	 * @example
+	 * combineArray(['Asbestos']) // returns 'Asbestos'
+	 * combineArray(['Asbestos', 'Mold']) // returns 'Asbestos and Mold'
+	 * combineArray(['Asbestos', 'Mold', 'Lead']) // returns 'Asbestos, Mold, and Lead'
+	 */
+	static combineArray(arr: string[]) {
+		if (arr.length === 1) {
+			return arr[0];
+		} else if (arr.length === 2) {
+			return arr.join(' and ');
+		} else {
+			return (
+				arr.slice(0, arr.length - 1).join(', ') + ', and ' + arr[arr.length - 1]
+			);
+		}
 	}
 
-	getName() {
-		return this.name;
+	getInfo(useRequestedAgencyOnly: boolean): string {
+		return `${this.name} (${this.abbreviation}) is the governing agency for ${
+			useRequestedAgencyOnly
+				? this.requestedGovernance.toLocaleLowerCase()
+				: RegulatoryAgency.combineArray(this.governance).toLocaleLowerCase()
+		} in ${this.state.name}: Phone: ${this.phone}, Website: ${this.website}`;
 	}
 
-	getAbbreviation(): string {
-		return this.abbreviation;
-	}
-
-	getPhone(): string {
-		return this.phone;
-	}
-
-	getWebsite(): string {
-		return this.website;
-	}
-
-	getGovernance(): string[] {
-		return this.governance;
+	toJSON(): string {
+		return JSON.stringify({
+			name: this.name,
+			abbreviation: this.abbreviation,
+			phone: this.phone,
+			website: this.website,
+			governance: this.governance,
+		});
 	}
 }
 
@@ -87,7 +108,10 @@ export const getRegulatoryAgency = (
 			agency.name,
 			agency.abbreviation,
 			agency.phoneNumber,
-			agency.website
+			agency.website,
+			agency.governance,
+			{ name: stateData.state, abbreviation: stateData.abbreviation },
+			category
 		);
 	}
 };

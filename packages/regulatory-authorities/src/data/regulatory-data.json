@@ -1,80 +1,105 @@
 [
-  {
-    "state": "Louisiana",
-    "abbreviation": "LA",
-    "country": "USA",
-    "agencies": [
-      {
-        "name": "Louisiana Department of Environmental Quality",
-        "abbreviation": "LDEQ",
-        "phoneNumber": "225-219-3640",
-        "website": "http://deq.louisiana.gov/page/asbestos-contacts",
-        "governance": [
-          "Asbestos"
-        ]
-      }
-    ]
-  },
-  {
-    "state": "Texas",
-    "abbreviation": "TX",
-    "country": "USA",
-    "agencies": [
-      {
-        "name": "Texas Department of State Health Services",
-        "abbreviation": "DSHS",
-        "phoneNumber": "512-834-6789",
-        "website": "https://www.dshs.texas.gov/elp/default.shtm#asbestos",
-        "governance": [
-          "Asbestos"
-        ]
-      }
-    ]
-  },
-  {
-    "state": "California",
-    "abbreviation": "CA",
-    "country": "USA",
-    "agencies": [
-      {
-        "name": "California Division of Occupational Safety and Health",
-        "abbreviation": "Cal/OSHA",
-        "phoneNumber": "800-963-9424",
-        "website": "https://www.dir.ca.gov/dosh/Asbestos-in-Construction.html",
-        "governance": [
-          "Asbestos"
-        ]
-      }
-    ]
-  },
-  {
-    "state": "New York",
-    "abbreviation": "NY",
-    "agencies": [
-      {
-        "name": " New York Department of Health",
-        "abbreviation": "NYDOH",
-        "phoneNumber": "1-800-458-1158",
-        "website": "https://www.health.ny.gov/environmental/indoors/air/asbestos.html",
-        "governance": [
-          "Asbestos"
-        ]
-      }
-    ]
-  },
-  {
-    "state": "Florida",
-    "abbreviation": "FL",
-    "agencies": [
-      {
-        "name": "Florida Department of Environmental Protection",
-        "abbreviation": "FDEP",
-        "phoneNumber": "(850) 245-8707",
-        "website": "http://www.dep.state.fl.us/waste/categories/asbestos/default.htm",
-        "governance": [
-          "Asbestos"
-        ]
-      }
-    ]
-  }
+	{
+		"state": "Louisiana",
+		"abbreviation": "LA",
+		"country": "USA",
+		"agencies": [
+			{
+				"name": "Louisiana Department of Environmental Quality",
+				"abbreviation": "LDEQ",
+				"phoneNumber": "225-219-3640",
+				"website": "http://deq.louisiana.gov/page/asbestos-contacts",
+				"governance": ["Asbestos"]
+			},
+			{
+				"name": "Louisiana Department of Health",
+				"abbreviation": "LDH",
+				"phoneNumber": "(225) 342-9500",
+				"website": "https://ldh.la.gov/ ",
+				"governance": ["Mold"]
+			}
+		]
+	},
+	{
+		"state": "Texas",
+		"abbreviation": "TX",
+		"country": "USA",
+		"agencies": [
+			{
+				"name": "Texas Department of State Health Services",
+				"abbreviation": "DSHS",
+				"phoneNumber": "512-834-6789",
+				"website": "https://www.dshs.texas.gov/elp/default.shtm#asbestos",
+				"governance": ["Asbestos"]
+			},
+			{
+				"name": "Texas Department of Licensing and Regulation",
+				"abbreviation": "TDLR",
+				"phoneNumber": "(800) 803-9202",
+				"website": "https://www.tdlr.texas.gov/mld/mld.htm",
+				"governance": ["Mold"]
+			}
+		]
+	},
+	{
+		"state": "California",
+		"abbreviation": "CA",
+		"country": "USA",
+		"agencies": [
+			{
+				"name": "California Division of Occupational Safety and Health",
+				"abbreviation": "Cal/OSHA",
+				"phoneNumber": "800-963-9424",
+				"website": "https://www.dir.ca.gov/dosh/Asbestos-in-Construction.html",
+				"governance": ["Asbestos"]
+			},
+			{
+				"name": "California is the California Department of Public Health",
+				"abbreviation": "CDPH",
+				"phoneNumber": "(916) 558-1784",
+				"website": "https://www.cdph.ca.gov/Programs/CEH/DRSEM/Pages/EMB/Mold.aspx",
+				"governance": ["Mold"]
+			}
+		]
+	},
+	{
+		"state": "New York",
+		"abbreviation": "NY",
+		"agencies": [
+			{
+				"name": " New York Department of Health",
+				"abbreviation": "NYDOH",
+				"phoneNumber": "1-800-458-1158",
+				"website": "https://www.health.ny.gov/environmental/indoors/air/asbestos.html",
+				"governance": ["Asbestos"]
+			},
+			{
+				"name": "New York State Department of Labor",
+				"abbreviation": "NYSDOL",
+				"phoneNumber": "1-888-469-7365",
+				"website": "https://www.labor.ny.gov/home/",
+				"governance": ["Mold"]
+			}
+		]
+	},
+	{
+		"state": "Florida",
+		"abbreviation": "FL",
+		"agencies": [
+			{
+				"name": "Florida Department of Environmental Protection",
+				"abbreviation": "FDEP",
+				"phoneNumber": "(850) 245-8707",
+				"website": "http://www.dep.state.fl.us/waste/categories/asbestos/default.htm",
+				"governance": ["Asbestos"]
+			},
+			{
+				"name": "Florida Department of Business and Professional Regulation",
+				"abbreviation": "DBPR",
+				"phoneNumber": "(850) 487-1395",
+				"website": "http://www.myfloridalicense.com/dbpr/",
+				"governance": ["Mold"]
+			}
+		]
+	}
 ]
