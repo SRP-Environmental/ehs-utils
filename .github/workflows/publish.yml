@@ -1,18 +1,32 @@
-name: Publish Package to npmjs
+name: Publish Package to npm
+
 on:
   release:
     types: [published, edited]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm publish --access public
+      - name: Publish packages
+        run: |
+          for package in $(find packages/* -maxdepth 0 -type d); do
+            echo "Processing package $package"
+            cd "$package"
+            # Only publish if version has changed
+            if [ -n "$(git status --porcelain | grep package.json)" ]; then
+              npm publish --access public
+            else
+              echo "Skipping publish for package $package, version has not changed."
+            fi
+            cd -
+          done
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
