@@ -1,4 +1,4 @@
-# EHS Data Package
+# EHS Utils Package
 
 This is a collection of packages related to Environmental, Health, and Safety (EHS) data.
 
@@ -21,7 +21,7 @@ Here are some additional packages we could consider adding in the future:
 1. OSHA Compliance - This package would provide information on OSHA compliance for a given state and industry.
 2. Chemical Hazard Information - This package would provide information on the hazards associated with a given chemical and their limits.
 3. Environmental Regulations - This package would provide information on environmental regulations for a given state and industry.
-4. [Your Idea Here!](https://github.com/SRP-Environmental/ehs-data/discussions) - We are open to suggestions for additional packages. Please open a discussion if you have an idea for a package.
+4. [Your Idea Here!](https://github.com/SRP-Environmental/ehs-utils/discussions) - We are open to suggestions for additional packages. Please open a discussion if you have an idea for a package.
 
 ## Contributions
 

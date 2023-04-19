@@ -14,7 +14,7 @@ This package is useful for anyone working with VOCs data, such as environmental 
 
 To install the package, run the following command:
 
-`npm install @ehs-data/voc-list`
+`npm install @ehs-utils/voc-list`
 
 #### Contact
 

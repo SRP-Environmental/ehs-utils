@@ -14,13 +14,13 @@ This package is useful for anyone who needs to access regulatory agency data rel
 
 To install the package, run the following command:
 
-`npm install @ehs-data/regulatory-authorities`
+`npm install @ehs-utils/regulatory-authorities`
 
 #### Usage
 
 To use the package, import the getRegulatoryAgency function from the package:
 
-`import { getRegulatoryAgency } from '@ehs-data/regulatory-authorities';`
+`import { getRegulatoryAgency } from '@ehs-utils/regulatory-authorities';`
 
 Then, call the function with the state and category of regulation as arguments:
 
@@ -29,7 +29,7 @@ Then, call the function with the state and category of regulation as arguments:
 #### Example
 
 ```javascript
-import { getRegulatoryAgency } from '@ehs-data/regulatory-authorities';
+import { getRegulatoryAgency } from '@ehs-utils/regulatory-authorities';
 
 const agency = getRegulatoryAgency({ name: 'California' }, 'Asbestos');
 ```
