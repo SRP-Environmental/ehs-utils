@@ -1,6 +1,6 @@
 {
 	"name": "@ehs-utils/vocs-list",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"access": "public",
 	"description": "This npm package provides a database of volatile organic compounds (VOCs) commonly found in industrial, commercial, and residential settings. It allows you to retrieve information about specific VOCs, as well as to search for VOCs by name or chemical formula.",
 	"main": "index.js",
