@@ -1,6 +1,6 @@
 {
 	"name": "ehs-utils",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "This package is useful for anyone working with environmental data, such as researchers, regulators, or environmental consultants. It provides a convenient way to access important information about regulatory agencies, data sets (like VOCs), and other relevant data in a programmatic way.",
 	"main": "index.js",
 	"scripts": {
