@@ -4,7 +4,7 @@
 
 This npm package provides a comprehensive database of regulatory authorities responsible for enforcing environmental regulations related to asbestos, mold, and other categories. It allows you to access data by state and by category, providing a convenient way to retrieve regulatory agency information for a particular type of regulation in a specific state.
 
-The package includes a getRegulatoryAgency function that allows you to retrieve information about the regulatory agency responsible for enforcing a particular type of environmental regulation in a given state. You can specify the state and category of regulation (e.g., asbestos, mold) to retrieve the corresponding agency information.
+The package includes a [`getRegulatoryAgency()`](#methods) function that allows you to retrieve information about the regulatory agency responsible for enforcing a particular type of environmental regulation in a given state. You can specify the state and category of regulation (e.g., asbestos, mold) to retrieve the corresponding agency information.
 
 The returned RegulatoryAgency object contains detailed information about the regulatory agency, including its name, abbreviation, phone number, website, and other relevant data. You can use this information to assist with compliance and regulatory reporting.
 
@@ -36,7 +36,7 @@ const agency = getRegulatoryAgency({ name: 'California' }, 'Asbestos');
 
 #### Methods
 
-##### getRegulatoryAgency(state, category)
+##### `getRegulatoryAgency(state, category)`
 
 Returns a RegulatoryAgency object containing information about the regulatory agency responsible for enforcing a particular type of environmental regulation in a given state.
 
@@ -83,13 +83,13 @@ Returns a RegulatoryAgency object containing information about the regulatory ag
 | state               | State  | The state in which the regulatory agency is located.                         |
 | requestedGovernance | string | The type of governance requested.                                            |
 
-##### Methods
+##### Class Methods
 
 `toJSON()`
 
 Returns a JSON representation of the RegulatoryAgency object.
 
-###### Exmaple
+###### Example
 
 ```javascript
 const agency = getRegulatoryAgency({ name: 'California' }, 'Asbestos');

@@ -1,0 +1,36 @@
+## VOCs List Package
+
+_ ⚠️ This package is currently in development. It is not yet ready for production use. ⚠️ _
+
+This npm package provides a database of volatile organic compounds (VOCs) commonly found in industrial, commercial, and residential settings. It allows you to retrieve information about specific VOCs, as well as to search for VOCs by name or chemical formula.
+
+The package includes a `getVOCsList` function that returns a list of all VOCs in the database. Each VOC is represented as a VOC object, containing its name, chemical formula, molecular weight, boiling point, melting point, vapor pressure, and other relevant data.
+
+In addition, the package includes a `searchVOCsList` function that allows you to search for VOCs by name or chemical formula. This function returns an array of VOC objects that match the search criteria.
+
+This package is useful for anyone working with VOCs data, such as environmental consultants, laboratory technicians, and industrial hygienists. It provides a convenient way to access information about specific VOCs, as well as to search for VOCs by name or chemical formula, facilitating research and analysis of VOCs in various contexts.
+
+#### Installation
+
+To install the package, run the following command:
+
+`npm install @ehs-data/voc-list`
+
+#### Contact
+
+For questions or comments, use the Discussions feature or please contact us at
+tech@srpenvironmental.net or visit our website at https://srpenvironmental.com
+
+#### Acknowledgements
+
+This package was created by SRP Environmental, LLC a leading IH, environmental, and safety consulting firm based in the United States. For more information, please visit our website at https://srpenvironmental.com/about/
+
+#### Disclaimer
+
+This package is not intended to be used as legal advice. Please consult with an attorney for legal advice. This package is provided "as is" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+#### Changelog
+
+##### 1.0.0
+
+- Initial release
